@@ -1,0 +1,100 @@
+{extend name="common/base2" /}
+
+{block name="maincontent"}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <small>会员信息</small>
+        </h1>
+
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-user"></i>  会员管理</a></li>
+            <li class="active">会员信息</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- Main row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div id="toolbar" class="toolbar">
+                            <a href="javascript:;" class="btn btn-primary btn-refresh" title="刷新"><i class="fa fa-refresh"></i> </a>
+                            <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled" title="编辑"><i class="fa fa-pencil"></i> 编辑</a>
+                            <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled" title="删除"><i class="fa fa-trash"></i> 删除</a>
+                        </div>
+                        <table id="table1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th><input name="btSelectAll" type="checkbox"></th>
+                                <th>会员ID</th>
+                                <th>会员姓名</th>
+                                <th>联系方式</th>
+                                <th>会员等级</th>
+                                <th>会员积分</th>
+                                <th>账户余额</th>
+                                <th>加入时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><input name="btSelectAll" type="checkbox"></td>
+                                <td>Trident</td>
+                                <td>Internet
+                                    Explorer 4.0
+                                </td>
+                                <td>Win 95+</td>
+                                <td> 4</td>
+                                <td>X</td>
+                                <td> 4</td>
+                                <td>X</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th><input name="btSelectAll" type="checkbox"></th>
+                                <th>会员ID</th>
+                                <th>会员姓名</th>
+                                <th>联系方式</th>
+                                <th>会员等级</th>
+                                <th>会员积分</th>
+                                <th>账户余额</th>
+                                <th>加入时间</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+        </div>
+        <!-- /.row (main row) -->
+
+    </section>
+    <!-- /.content -->
+</div>
+{/block}
+
+{block name="script"}
+{__block__}
+<script src="__JS__/jquery.dataTables.js"></script>
+<script src="__JS__/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="__JS__/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="__JS__/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="__ADMJS__/adminlte.js"></script>
+<!-- page script -->
+<script>
+    $(function () {
+        $('#table1').DataTable()
+    })
+</script>
+{/block}
+
